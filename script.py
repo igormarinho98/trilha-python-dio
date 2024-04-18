@@ -4,7 +4,7 @@ menu = """
 [s] Sacar
 [e] Extrato
 [q] Sair
-
+[st] Saque total
 => """
 
 saldo = 0
@@ -61,6 +61,15 @@ while True:
 
     elif opcao == "q":
         break
+
+        # o saque total pode ser util em cenarios de encerramento de conta
+    elif opcao == "st":
+        print("\n================ SAQUE TOTAL DA CONTA ================")
+        if saldo > 0: 
+            print("Você sacou com sucesso todo o montante da conta:", saldo)
+            saldo = 0
+        else:
+            print("Não possui saldo disponivel a sacar.") 
 
     else:
         print("Operação inválida, por favor selecione novamente a operação desejada.")
